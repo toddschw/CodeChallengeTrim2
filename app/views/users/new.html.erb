@@ -1,4 +1,4 @@
-<h1>Trim Coding Challenge</h1>
+<h1 style="text-align:center;">Trim Coding Challenge</h1>
 
 <%= render 'form' %>
 
@@ -11,14 +11,14 @@
   //  Show Instructions
   $('#user_fullname').on('blur', function() {
      var Instructions = "Welcome ";
-     Instructions += $(this).val();
+     Instructions += $(this).val() + ".";
      Instructions += "<br>From Instructions:";
      Instructions += "<Br><ul><li>Step 1: Enter your basic info</li>";
      Instructions += "<li>Step 2: You have 50 points available</li>";
      Instructions += "<li>Step 3: Use the points to rate yourselsf on the skills listed </li>";
      Instructions += "</ul>";
 
-     $('.field' ).eq(0).append( "<br><br><div style='background-color:#c2f0c2;width:35vw;'>" + Instructions + "</div>" )
+     $('.field' ).eq(0).append( "<br><br><div style='background-color:#456990;color:#E4FDE1;width:90%;text-align:left;padding-left:20px;'>" + Instructions + "</div>" )
   });
 
   // Run Points Calculation
