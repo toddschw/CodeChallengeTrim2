@@ -1,0 +1,1 @@
+json.extract! @user, :id, :fullname, :email, :projectRepo, :projectURL, :oop, :modular, :stack, :testing, :database, :debugging, :problemsolving, :javascript, :html, :css, :team, :motivation, :communication, :energy, :created_at, :updated_at

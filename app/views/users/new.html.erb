@@ -1,0 +1,41 @@
+<h1>Trim Coding Challenge - Enter Your Info</h1>
+
+<%= render 'form' %>
+
+
+
+<script type="text/javascript">
+ $(function() {
+   console.log('smoke test');
+
+   var INITIAL_POINTS = 50;
+
+       $('#user_oop').on('blur', function() {
+           var $points_oop = $('#user_oop').val();
+           $points_remaining = INITIAL_POINTS - $points_oop;
+          console.log($points_remaining);
+          $('.field' ).eq(4).append( "<p>Points Remaining: " + $points_remaining + "</p>" )
+
+       });
+
+       $('#user_modular').on('blur', function() {
+           var $points_modular = $('#user_modular').val();
+          $points_remaining =  $points_remaining - $points_modular;
+          console.log($points_remaining);
+          $('.field' ).eq(5).append( "<p>Points Remaining: " + $points_remaining + "</p>" )
+
+       });
+
+       $('#user_stack').on('blur', function() {
+           var $points_stack = $('#user_stack').val();
+          $points_remaining =  $points_remaining - $points_stack;
+          console.log($points_remaining);
+          $('.field' ).eq(6).append( "<p>Points Remaining: " + $points_remaining + "</p>" )
+
+       });
+
+
+
+
+ });
+</script>

@@ -1,0 +1,95 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fullname %><br>
+    <%= f.text_field :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :projectRepo %><br>
+    <%= f.text_field :projectRepo %>
+  </div>
+  <div class="field">
+    <%= f.label :projectURL %><br>
+    <%= f.text_field :projectURL %>
+  </div>
+  <div class="field">
+    <%= f.label :oop %><br>
+    <%= f.number_field :oop %>
+  </div>
+  <div class="field">
+    <%= f.label :modular %><br>
+    <%= f.number_field :modular %>
+  </div>
+  <div class="field">
+    <%= f.label :stack %><br>
+    <%= f.number_field :stack %>
+  </div>
+  <div class="field">
+    <%= f.label :testing %><br>
+    <%= f.number_field :testing %>
+  </div>
+  <div class="field">
+    <%= f.label :database %><br>
+    <%= f.number_field :database %>
+  </div>
+  <div class="field">
+    <%= f.label :debugging %><br>
+    <%= f.number_field :debugging %>
+  </div>
+  <div class="field">
+    <%= f.label :problemsolving %><br>
+    <%= f.number_field :problemsolving %>
+  </div>
+  <div class="field">
+    <%= f.label :javascript %><br>
+    <%= f.number_field :javascript %>
+  </div>
+  <div class="field">
+    <%= f.label :html %><br>
+    <%= f.number_field :html %>
+  </div>
+  <div class="field">
+    <%= f.label :css %><br>
+    <%= f.number_field :css %>
+  </div>
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.number_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :motivation %><br>
+    <%= f.number_field :motivation %>
+  </div>
+  <div class="field">
+    <%= f.label :communication %><br>
+    <%= f.number_field :communication %>
+  </div>
+  <div class="field">
+    <%= f.label :energy %><br>
+    <%= f.number_field :energy %>
+  </div>
+  <div class="field">
+    <%= f.label :intelligence %><br>
+    <%= f.number_field :intelligence %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

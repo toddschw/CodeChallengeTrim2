@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Code Challenge Submission from <%= @user.fullname %></h1>
+    <h1>Point Total: <%= @points_total %></h1>
+    <hr>
+
+    <p>Full Name:
+    <%= @user.fullname %></p>
+
+    <p>Email:
+    <%= @user.email %></p>
+
+    <p>Project Repo on Github:
+    <%= @user.projectRepo %></p>
+
+    <p>Project URL:
+    <%= @user.projectURL %></p>
+
+    <p>Using best practices for OOP:
+      <%= @user.oop.to_i %> Points
+    </p>
+
+
+    <p>Modular development:
+      <%= @user.modular.to_i %> Points:
+    </p>
+
+    <p>Full Stack workflow understanding:
+    <%= @user.stack.to_i %> Points
+    </p>
+
+    <p>Testing:
+    <%= @user.testing.to_i %> Points
+    </p>
+
+    <p>Database Knowledge:
+    <%= @user.database.to_i %> Points
+    </p>
+
+    <p>Debugging:
+    <%= @user.debugging.to_i %> Points
+    </p>
+
+    <p>Problem Solving Skills:
+    <%= @user.problemsolving.to_i %> Points
+    </p>
+
+    <p>Javascript:
+    <%= @user.javascript.to_i %> Points
+    </p>
+
+    <p>HTML:
+    <%= @user.html.to_i %> Points
+    </p>
+
+    <p>CSS:
+    <%= @user.css.to_i %> Points
+    </p>
+
+    <p>Working on a team:
+    <%= @user.team.to_i %> Points
+    </p>
+
+    <p>Self motivation:
+    <%= @user.motivation.to_i %> Points
+    </p>
+
+    <p>communication skills:
+    <%= @user.communication.to_i %> Points
+    </p>
+
+    <p>Energy level:
+    <%= @user.energy.to_i %> Points
+    </p>
+
+    <p>Intelligence:
+    <%= @user.intelligence.to_i %> Points
+    </p>
+
+
+
+
+  </body>
+</html>
