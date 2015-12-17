@@ -23,7 +23,7 @@ class MyMailer < ActionMailer::Base
       @user.intelligence.to_i
 
     #send mail
-    mail(to: 'todd@wirestreak.com', subject: 'Submission for Trim Code Challenge')
+    mail(to: 'tim@trimagency.com', subject: 'Submission for Trim Code Challenge')
   end
 
 end
