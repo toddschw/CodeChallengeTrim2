@@ -11,45 +11,96 @@
   //  Show Instructions
   $('#user_fullname').on('blur', function() {
      var Instructions = "Welcome ";
-     Instructions += $(this).val() + ".";
+     Instructions += $(this).val() + "." + "<br>";
      Instructions += "<br>From Instructions:";
-     Instructions += "<Br><ul><li>Step 1: Enter your basic info</li>";
-     Instructions += "<li>Step 2: You have 50 points available</li>";
-     Instructions += "<li>Step 3: Use the points to rate yourselsf on the skills listed </li>";
-     Instructions += "</ul>";
+     Instructions += "<Br>Step 1: Enter your basic info.<br>";
+     Instructions += "Step 2: You have 50 points available.<br>";
+     Instructions += "Step 3: Use the points to rate yourself on the skills listed.<br>";
 
-     $('.field' ).eq(0).append( "<br><br><div style='background-color:#456990;color:#E4FDE1;width:90%;text-align:left;padding-left:20px;'>" + Instructions + "</div>" )
+     $('.field' ).eq(0).append( "<br><br><div id='instrux'>" + Instructions + "</div>" )
   });
 
+  // style='background-color:#456990;color:#E4FDE1;width:90%;text-align:left;padding-left:20px;'
+
   // Run Points Calculation
-   var INITIAL_POINTS = 50;
+   var ACCUMULATED_POINTS = 0;
 
-       $('#user_oop').on('blur', function() {
-           var $points_oop = $('#user_oop').val();
-           $points_remaining = INITIAL_POINTS - $points_oop;
-          console.log($points_remaining);
-          $('.field' ).eq(4).append( "<p>Points Remaining: " + $points_remaining + "</p>" )
+       $('#user_oop, #user_modular, #user_stack,#user_testing,#user_database,#user_debugging,#user_problemsolving,#user_javascript,#user_html,#user_css,#user_team,#user_motivation,#user_communication,#user_energy,#user_intelligence').on('blur', function() {
+           var points_oop = parseInt($('#user_oop').val());
+           var points_modular = parseInt($('#user_modular').val());
+           var points_stack = parseInt($('#user_stack').val());
+           var points_testing = parseInt($('#user_testing').val());
+           var points_database = parseInt($('#user_database').val());
+           var points_debugging = parseInt($('#user_debugging').val());
+           var points_problemsolving = parseInt($('#user_problemsolving').val());
+           var points_javascript = parseInt($('#user_javascript').val());
+           var points_html = parseInt($('#user_html').val());
+           var points_css = parseInt($('#user_css').val());
+           var points_team = parseInt($('#user_team').val());
+           var points_motivation = parseInt($('#user_motivation').val());
+           var points_communication = parseInt($('#user_communication').val());
+           var points_energy = parseInt($('#user_energy').val());
+           var points_intelligence = parseInt($('#user_intelligence').val());
+
+
+
+           if (isNaN(points_oop)) {
+             points_oop = 0
+           };
+           if (isNaN(points_modular)) {
+             points_modular = 0
+           };
+           if (isNaN(points_stack)) {
+             points_stack = 0
+           };
+           if (isNaN(points_testing)) {
+             points_testing = 0
+           };
+           if (isNaN(points_database)) {
+             points_database = 0
+           };
+           if (isNaN(points_debugging)) {
+             points_debugging = 0
+           };
+           if (isNaN(points_problemsolving)) {
+             points_problemsolving = 0
+           };
+           if (isNaN(points_javascript)) {
+             points_javascript = 0
+           };
+           if (isNaN(points_html)) {
+             points_html = 0
+           };
+           if (isNaN(points_css)) {
+             points_css = 0
+           };
+           if (isNaN(points_team)) {
+             points_team = 0
+           };
+           if (isNaN(points_motivation)) {
+             points_motivation = 0
+           };
+           if (isNaN(points_communication)) {
+             points_communication = 0
+           };
+           if (isNaN(points_energy)) {
+             points_energy = 0
+           };
+           if (isNaN(points_intelligence)) {
+             points_intelligence = 0
+           };
+
+
+           var total_amount = points_stack + points_oop + points_modular + points_testing
+                              + points_database + points_debugging + points_problemsolving
+                              + points_javascript + points_html + points_css + points_team
+                              + points_motivation + points_communication + points_energy + points_intelligence
+
+          //  console.log(parseInt(total_amount));
+
+            $('#points_tally').replaceWith("<div id='points_tally'>POINTS REMAINING:" + (50 - total_amount) + "</div></p>");
 
        });
-
-       $('#user_modular').on('blur', function() {
-           var $points_modular = $('#user_modular').val();
-          $points_remaining =  $points_remaining - $points_modular;
-          console.log($points_remaining);
-          $('.field' ).eq(5).append( "<p>Points Remaining: " + $points_remaining + "</p>" )
-
-       });
-
-       $('#user_stack').on('blur', function() {
-           var $points_stack = $('#user_stack').val();
-          $points_remaining =  $points_remaining - $points_stack;
-          console.log($points_remaining);
-          $('.field' ).eq(6).append( "<p>Points Remaining: " + $points_remaining + "</p>" )
-
-       });
-
-
-
 
  });
 </script>
